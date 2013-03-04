@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mr.King的博客 - Mr.King</title>
+    <title>Mr.King的博客 - 指针</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -91,70 +91,6 @@
         <div class="span9" id="content">
                     
 		<div class='article'>
-		<h1><a href="../linusda-shen-shuo-ni-bu-dong-zhi-zhen.html">Linus大神说你不懂指针</a></h1>
-		<div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-01-11T00:00:00">
-	<i class="icon-calendar"></i>Fri, 11 Jan 2013
-</abbr>
-<span class="label">By</span>
-<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
-<span class="label">Category</span>
-<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>. 
-
-	
-<span class="label">Tags</span> 
-	<a href="../tag/linus.html"><i class="icon-tag"></i>Linus</a>
-	<a href="../tag/zhi-zhen.html"><i class="icon-tag"></i>指针</a>
-</footer><!-- /.post-info --></div>
-		<div class="summary"><p><strong>move from my old blog</strong></p>
-<p>最近在reddit上看到了一篇文章，觉得不错，在这里大概记录下自己的理解。原文<a href="http://wordaligned.org/articles/two-star-programming">链接</a>。</p>
-<p>有这篇文章的原因是Linus在<a href="http://meta.slashdot.org/story/12/10/11/0030249/linus-torvalds-answers-your-questions">slashdot</a>上回答问题，回答某个问题时，做了如下回答：<br/></p>
-<blockquote>
-<p>At the opposite end of the spectrum, I actually wish more people understood the really core low-level kind of coding. Not big, complex stuff like the lockless name lookup, but simply good use of pointers-to-pointers ...</p></blockquote> 
-			<a class="btn primary xsmall" href="../linusda-shen-shuo-ni-bu-dong-zhi-zhen.html">more ...</a>
-		</div>
-	</div>	
-	<hr />
-		<div class='article'>
-		<h1><a href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">用github pages和pelican搭建免费的个人博客</a></h1>
-		<div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-01-16T00:00:00">
-	<i class="icon-calendar"></i>Wed, 16 Jan 2013
-</abbr>
-<span class="label">By</span>
-<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
-<span class="label">Category</span>
-<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>. 
-
-	
-<span class="label">Tags</span> 
-	<a href="../tag/github-pages.html"><i class="icon-tag"></i>github pages</a>
-	<a href="../tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="../tag/markdown.html"><i class="icon-tag"></i>markdown</a>
-</footer><!-- /.post-info --></div>
-		<div class="summary"><p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
-<p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
-<p>首先安装pelican：</p>
-<blockquote>
-<p>pip install pelican</p>
-</blockquote>
-<p>创建一个blog目录：</p>
-<blockquote>
-<p>mkdir yourblog</p>
-<p>cd yourblog</p>
-</blockquote>
-<p>创建一个博客：</p>
-<blockquote>
-<p>pelican-quickstart</p>
-</blockquote>
-<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改 ...</p> 
-			<a class="btn primary xsmall" href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">more ...</a>
-		</div>
-	</div>	
-	<hr />
-		<div class='article'>
 		<h1><a href="../zai-shuo-xia-zhi-zhen.html">再说下指针</a></h1>
 		<div class="well small"><footer class="post-info">
 <span class="label">Date</span>
@@ -188,6 +124,32 @@
     <span class="n">p</span> <span class="o">-&gt;</span> <span class="n">data</span> <span class="o">=</span> <span class="n">item</span><span class="p">;</span>
     <span class="n">p</span> <span class="o">-&gt;</span> <span class="k">next</span> <span class="o">=</span> <span class="n">head ...</span></pre></div> 
 			<a class="btn primary xsmall" href="../zai-shuo-xia-zhi-zhen.html">more ...</a>
+		</div>
+	</div>	
+	<hr />
+		<div class='article'>
+		<h1><a href="../linusda-shen-shuo-ni-bu-dong-zhi-zhen.html">Linus大神说你不懂指针</a></h1>
+		<div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-01-11T00:00:00">
+	<i class="icon-calendar"></i>Fri, 11 Jan 2013
+</abbr>
+<span class="label">By</span>
+<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
+<span class="label">Category</span>
+<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>. 
+
+	
+<span class="label">Tags</span> 
+	<a href="../tag/linus.html"><i class="icon-tag"></i>Linus</a>
+	<a href="../tag/zhi-zhen.html"><i class="icon-tag"></i>指针</a>
+</footer><!-- /.post-info --></div>
+		<div class="summary"><p><strong>move from my old blog</strong></p>
+<p>最近在reddit上看到了一篇文章，觉得不错，在这里大概记录下自己的理解。原文<a href="http://wordaligned.org/articles/two-star-programming">链接</a>。</p>
+<p>有这篇文章的原因是Linus在<a href="http://meta.slashdot.org/story/12/10/11/0030249/linus-torvalds-answers-your-questions">slashdot</a>上回答问题，回答某个问题时，做了如下回答：<br/></p>
+<blockquote>
+<p>At the opposite end of the spectrum, I actually wish more people understood the really core low-level kind of coding. Not big, complex stuff like the lockless name lookup, but simply good use of pointers-to-pointers ...</p></blockquote> 
+			<a class="btn primary xsmall" href="../linusda-shen-shuo-ni-bu-dong-zhi-zhen.html">more ...</a>
 		</div>
 	</div>	
 	<hr />
