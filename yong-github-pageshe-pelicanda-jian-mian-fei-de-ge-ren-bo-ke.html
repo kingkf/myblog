@@ -119,7 +119,7 @@
 	<a href="./tag/pelican.html"><i class="icon-tag"></i>pelican</a>
 	<a href="./tag/markdown.html"><i class="icon-tag"></i>markdown</a>
 </footer><!-- /.post-info -->		</div>
-		<p>最近有个需求，就是将一系列md文件以博客的形式发布出来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
+		<p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
 <p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
 <p>首先安装pelican：</p>
 <blockquote>
@@ -164,6 +164,10 @@
 </blockquote>
 <p>上传成功之后，等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.</p>
 <p>关于github和git的使用，这里就不说了。<strong>友情提示</strong>：别忘了在github上配置RSA公钥</p>
+<p>下面讲讲<strong>域名绑定</strong></p>
+<p>用我的域名kaifengjin.com做为例子
+在文章的输出目录，即myblog目录，创建一个文件CNAME，里面写上:<strong>www.kaifengjin.com</strong> git push到github。然后在域名服务商那，把域名对应的ip改成username.github.com对应的ip即可（有些域名服务商改完后可能要等段时间，最多可能到1天，改完后ping下域名看看是否对应的是改后的ip）。接下来就可以用域名访问自己的博客了！</p>
+<p>ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在发布命令中加入-t [主题目录所在路径]即可。</p>
 		</div><!-- /.entry-content -->
 				<div class="comments">
 		<h2>Comments !</h2>
@@ -206,13 +210,13 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="./tag/github pages.html">
-        <i class="icon-tag icon-large"></i>github pages
+    <a href="./tag/markdown.html">
+        <i class="icon-tag icon-large"></i>markdown
     </a>
 </li>
 <li class="tag-4">
-    <a href="./tag/markdown.html">
-        <i class="icon-tag icon-large"></i>markdown
+    <a href="./tag/github pages.html">
+        <i class="icon-tag icon-large"></i>github pages
     </a>
 </li>
 <li class="tag-4">
