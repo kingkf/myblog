@@ -100,9 +100,10 @@
 &lt;p&gt;Date: 2010-12-03 #日期&lt;/p&gt;
 &lt;p&gt;Title: My super title ＃标题&lt;/p&gt;
 &lt;p&gt;Tags: thats, awesome #标签 &lt;/p&gt;
+&lt;p&gt;Category: tech #分类&lt;/p&gt;
 &lt;p&gt;文章内容&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;其中Date和Title是必须的，其它的可以不写，还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。&lt;/p&gt;
+&lt;p&gt;其中Date和Title是必须的，其它的可以不写，分类的话不写就是默认分类，默认分类在配置文件中设置，当然如果该文件位于content目录中某个子目录中时，如./content/tech，那pelican就把这篇文章分类为子目录名tech。还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。&lt;/p&gt;
 &lt;p&gt;写完了文章，就该发布了！回到yourblog的根目录，用下面的命令：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;pelican -s pelicanconf.py content -o myblog&lt;/p&gt;
@@ -113,12 +114,12 @@
 &lt;p&gt;git commit -m "first blog"&lt;/p&gt;
 &lt;p&gt;git push -u origin gh-pages&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;上传成功之后，等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.&lt;/p&gt;
+&lt;p&gt;上传成功之后，第一次需要等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.&lt;/p&gt;
 &lt;p&gt;关于github和git的使用，这里就不说了。&lt;strong&gt;友情提示&lt;/strong&gt;：别忘了在github上配置RSA公钥&lt;/p&gt;
 &lt;p&gt;下面讲讲&lt;strong&gt;域名绑定&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;用我的域名kaifengjin.com做为例子
 在文章的输出目录，即myblog目录，创建一个文件CNAME，里面写上:&lt;strong&gt;www.kaifengjin.com&lt;/strong&gt; git push到github。然后在域名服务商那，把域名对应的ip改成username.github.com对应的ip即可（有些域名服务商改完后可能要等段时间，最多可能到1天，改完后ping下域名看看是否对应的是改后的ip）。接下来就可以用域名访问自己的博客了！&lt;/p&gt;
-&lt;p&gt;ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在发布命令中加入-t [主题目录所在路径]即可。&lt;/p&gt;</summary><category term="github pages"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>再说下指针</title><link href="/zai-shuo-xia-zhi-zhen.html" rel="alternate"></link><updated>2013-01-14T00:00:00+08:00</updated><author><name>Mr.King</name></author><id>tag:,2013-01-14:zai-shuo-xia-zhi-zhen.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;move from my old blog&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在配置文件中加上THEME = bootstrap2,然后在发布命令中加入-t [主题目录所在路径]即可，即pelican -s pelicanconf.py content -o myblog -t bootsrap2&lt;/p&gt;</summary><category term="github pages"></category><category term="pelican"></category><category term="markdown"></category></entry><entry><title>再说下指针</title><link href="/zai-shuo-xia-zhi-zhen.html" rel="alternate"></link><updated>2013-01-14T00:00:00+08:00</updated><author><name>Mr.King</name></author><id>tag:,2013-01-14:zai-shuo-xia-zhi-zhen.html</id><summary type="html">&lt;p&gt;&lt;strong&gt;move from my old blog&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;前几天看了那个Linus关于指针的回答，今天碰巧看数据结构看到了链表这块，突然对指针又有了点想法，在这里记录下。&lt;/p&gt;
 &lt;p&gt;以前写链表的插入操作，都是在main函数中写，没有用函数封装过，今天突然尝试用函数封装下插如的过程，最开始的代码是&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="c1"&gt;#include &amp;lt;stdlib.h&amp;gt;&lt;/span&gt;

@@ -149,9 +149,10 @@
 <p>Date: 2010-12-03 #日期</p>
 <p>Title: My super title ＃标题</p>
 <p>Tags: thats, awesome #标签 </p>
+<p>Category: tech #分类</p>
 <p>文章内容</p>
 </blockquote>
-<p>其中Date和Title是必须的，其它的可以不写，还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。</p>
+<p>其中Date和Title是必须的，其它的可以不写，分类的话不写就是默认分类，默认分类在配置文件中设置，当然如果该文件位于content目录中某个子目录中时，如./content/tech，那pelican就把这篇文章分类为子目录名tech。还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。</p>
 <p>写完了文章，就该发布了！回到yourblog的根目录，用下面的命令：</p>
 <blockquote>
 <p>pelican -s pelicanconf.py content -o myblog</p>
@@ -162,12 +163,12 @@
 <p>git commit -m "first blog"</p>
 <p>git push -u origin gh-pages</p>
 </blockquote>
-<p>上传成功之后，等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.</p>
+<p>上传成功之后，第一次需要等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.</p>
 <p>关于github和git的使用，这里就不说了。<strong>友情提示</strong>：别忘了在github上配置RSA公钥</p>
 <p>下面讲讲<strong>域名绑定</strong></p>
 <p>用我的域名kaifengjin.com做为例子
 在文章的输出目录，即myblog目录，创建一个文件CNAME，里面写上:<strong>www.kaifengjin.com</strong> git push到github。然后在域名服务商那，把域名对应的ip改成username.github.com对应的ip即可（有些域名服务商改完后可能要等段时间，最多可能到1天，改完后ping下域名看看是否对应的是改后的ip）。接下来就可以用域名访问自己的博客了！</p>
-<p>ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在发布命令中加入-t [主题目录所在路径]即可。</p>
+<p>ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在配置文件中加上THEME = bootstrap2,然后在发布命令中加入-t [主题目录所在路径]即可，即pelican -s pelicanconf.py content -o myblog -t bootsrap2</p>
 		</div><!-- /.entry-content -->
 				<div class="comments">
 		<h2>Comments !</h2>
@@ -195,7 +196,6 @@
     <li><i class="icon-external-link"></i><a href="http://jinja.pocoo.org">Jinja2</a></li>
     <li><i class="icon-external-link"></i><a href="http://iguang.info">产品经理阿光机</a></li>
     <li><i class="icon-external-link"></i><a href="http://coolshell.com">酷壳</a></li>
-    <li><i class="icon-external-link"></i><a href="#">You can modify those links in your config file</a></li>
 <li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
 <li><a href="./" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
     <li><a href="http://weibo.com/zybest"><i class="icon-我的新浪微博-sign icon-large"></i>我的新浪微博</a></li>
@@ -210,23 +210,8 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="./tag/读书笔记.html">
-        <i class="icon-tag icon-large"></i>读书笔记
-    </a>
-</li>
-<li class="tag-4">
     <a href="./tag/github pages.html">
         <i class="icon-tag icon-large"></i>github pages
-    </a>
-</li>
-<li class="tag-4">
-    <a href="./tag/算法.html">
-        <i class="icon-tag icon-large"></i>算法
-    </a>
-</li>
-<li class="tag-4">
-    <a href="./tag/pelican.html">
-        <i class="icon-tag icon-large"></i>pelican
     </a>
 </li>
 <li class="tag-4">
@@ -240,8 +225,23 @@
     </a>
 </li>
 <li class="tag-4">
+    <a href="./tag/读书笔记.html">
+        <i class="icon-tag icon-large"></i>读书笔记
+    </a>
+</li>
+<li class="tag-4">
+    <a href="./tag/pelican.html">
+        <i class="icon-tag icon-large"></i>pelican
+    </a>
+</li>
+<li class="tag-4">
     <a href="./tag/Linus.html">
         <i class="icon-tag icon-large"></i>Linus
+    </a>
+</li>
+<li class="tag-4">
+    <a href="./tag/算法.html">
+        <i class="icon-tag icon-large"></i>算法
     </a>
 </li>
 
