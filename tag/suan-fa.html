@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mr.King的博客 - github pages</title>
+    <title>Mr.King的博客 - 算法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -91,11 +91,11 @@
         <div class="span9" id="content">
                     
 		<div class='article'>
-		<h1><a href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">用github pages和pelican搭建免费的个人博客</a></h1>
+		<h1><a href="../zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">最大子段和的分治算法--算法导论读书笔记</a></h1>
 		<div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-01-16T00:00:00">
-	<i class="icon-calendar"></i>Wed, 16 Jan 2013
+<abbr class="published" title="2013-03-03T00:00:00">
+	<i class="icon-calendar"></i>Sun, 03 Mar 2013
 </abbr>
 <span class="label">By</span>
 <a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
@@ -104,27 +104,21 @@
 
 	
 <span class="label">Tags</span> 
-	<a href="../tag/github-pages.html"><i class="icon-tag"></i>github pages</a>
-	<a href="../tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="../tag/markdown.html"><i class="icon-tag"></i>markdown</a>
+	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
+	<a href="../tag/suan-fa.html"><i class="icon-tag"></i>算法</a>
 </footer><!-- /.post-info --></div>
-		<div class="summary"><p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
-<p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
-<p>首先安装pelican：</p>
-<blockquote>
-<p>pip install pelican</p>
-</blockquote>
-<p>创建一个blog目录：</p>
-<blockquote>
-<p>mkdir yourblog</p>
-<p>cd yourblog</p>
-</blockquote>
-<p>创建一个博客：</p>
-<blockquote>
-<p>pelican-quickstart</p>
-</blockquote>
-<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改 ...</p> 
-			<a class="btn primary xsmall" href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">more ...</a>
+		<div class="summary"><p>问题描述：一个有N个整数元素的一维数组A，找出这个数组的一个子数组，要求这个子数组连续，非空，而且子数组的元素和是所有子数组中最大的。</p>
+<p>首先最简单的做法是暴力法，枚举所有子数组A[i..j],然后计算每个子数组的和，最后算出最大的。算法导论上没有讲这种算法，在后面的练习中要求读者自己实现，时间复杂度要求为O(n^2)。下面是我简单的实现：</p>
+<div class="codehilite"><pre><span class="nb">int</span> <span class="n">find_maximum_subarray</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="o">[]</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n</span><span class="p">)</span>
+ <span class="p">{</span>
+     <span class="nb">int</span> <span class="n">maximum</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+     <span class="nb">int</span> <span class="n">sum</span><span class="p">;</span> 
+     <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+         <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">sum</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">j ...</span></pre></div> 
+			<a class="btn primary xsmall" href="../zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">more ...</a>
 		</div>
 	</div>	
 	<hr />
