@@ -162,9 +162,9 @@
 
 
 &lt;p&gt;结果只输出了一个0.经常gdb的调试，我才发现了我想当然的错。先说下我错的原因，用一个图表示我最开始的想法。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="1" src="http://blog-mking.rhcloud.com/wp-content/uploads/2013/01/1.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="1" src="./pic/1.jpeg" /&gt;&lt;/p&gt;
 &lt;p&gt;虚线的head表示c语言传值，将head的一个copy传入link_insert函数然后按照如下图所示的过程，进行了插入操作。我相当然的认为虚线的head就是一开始传入的head，其实函数调用前head指向哪，调用完后还指向哪。一画图一切都很明了，不画图，很容易想当然用上面的方式实现。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="2" src="http://blog-mking.rhcloud.com/wp-content/uploads/2013/01/2.jpeg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="2" src="./pic/2.jpeg" /&gt;&lt;/p&gt;
 &lt;p&gt;那怎么样才能让原head指针在函数中跟着动呢？即一只保持head指针指向头节点。我想到了双重指针。实现如下：&lt;/p&gt;
 &lt;div class="codehilite"&gt;&lt;pre&gt;&lt;span class="n"&gt;void&lt;/span&gt; &lt;span class="n"&gt;link_insert&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;struct&lt;/span&gt; &lt;span class="n"&gt;node&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
