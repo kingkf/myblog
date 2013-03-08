@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mr.King的博客 - 算法</title>
+    <title>Mr.King的博客 - 算法，qsort，快速排序</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -96,11 +96,11 @@
         <div class="span9" id="content">
                     
 		<div class='article'>
-		<h1><a href="../zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">最大子段和的分治算法--算法导论读书笔记</a></h1>
+		<h1><a href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">高效的快速排序实现</a></h1>
 		<div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-03-03T00:00:00">
-	<i class="icon-calendar"></i>Sun, 03 Mar 2013
+<abbr class="published" title="2013-03-08T00:00:00">
+	<i class="icon-calendar"></i>Fri, 08 Mar 2013
 </abbr>
 <span class="label">By</span>
 <a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
@@ -110,20 +110,18 @@
 	
 <span class="label">Tags</span> 
 	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
-	<a href="../tag/suan-fa.html"><i class="icon-tag"></i>算法</a>
+	<a href="../tag/suan-fa-qsortkuai-su-pai-xu.html"><i class="icon-tag"></i>算法，qsort，快速排序</a>
 </footer><!-- /.post-info --></div>
-		<div class="summary"><p>问题描述：一个有N个整数元素的一维数组A，找出这个数组的一个子数组，要求这个子数组连续，非空，而且子数组的元素和是所有子数组中最大的。</p>
-<p>首先最简单的做法是暴力法，枚举所有子数组A[i..j],然后计算每个子数组的和，最后算出最大的。算法导论上没有讲这种算法，在后面的练习中要求读者自己实现，时间复杂度要求为O(n^2)。下面是我简单的实现：</p>
-<div class="codehilite"><pre><span class="nb">int</span> <span class="n">find_maximum_subarray</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="o">[]</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n</span><span class="p">)</span>
- <span class="p">{</span>
-     <span class="nb">int</span> <span class="n">maximum</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-     <span class="nb">int</span> <span class="n">sum</span><span class="p">;</span> 
-     <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
-     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-         <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-         <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-             <span class="n">sum</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">j ...</span></pre></div> 
-			<a class="btn primary xsmall" href="../zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">more ...</a>
+		<div class="summary"><p>最近复习快速排序算法，无意中发现一篇由JON L. BENTLEY（编程珠矶的作者）和M. DOUGLAS McILROY（也是个牛人，见<a href="http://en.wikipedia.org/wiki/Douglas_McIlroy">wikipedia</a>)合著的一篇论文叫<a href="http://www.enseignement.polytechnique.fr/informatique/profs/Luc.Maranget/421/09/bentley93engineering.pdf">Engineering a Sort Function</a>.这篇文章详细讲述了怎么实现工业生产环境中适用的快速排序算法。记录下主要内容，权当做笔记。</p>
+<h2>排序函数的接口</h2>
+<p>C语言标准库中有个函数叫qsort，主要就是实现这么一个函数。先看一个整数的插入排序的实现，虽然很慢，但是在工业生成环境中还是非常有用的，这个后面会提到。定义这个排序函数的名字为iisort(integer insert sort).实现如下：</p>
+<div class="codehilite"><pre><span class="n">void</span> <span class="n">iisort</span><span class="p">(</span><span class="nb">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j ...</span></pre></div> 
+			<a class="btn primary xsmall" href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">more ...</a>
 		</div>
 	</div>	
 	<hr />
