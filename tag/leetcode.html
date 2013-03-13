@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mr.King的博客 - 快速排序</title>
+    <title>Mr.King的博客 - leetcode</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -101,34 +101,26 @@
         <div class="span9" id="content">
                     
 		<div class='article'>
-		<h1><a href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">高效的快速排序实现</a></h1>
+		<h1><a href="../zui-shao-hui-wen-fen-ge.html">最少回文分割</a></h1>
 		<div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-03-08T00:00:00">
-	<i class="icon-calendar"></i>Fri, 08 Mar 2013
+<abbr class="published" title="2013-03-13T00:00:00">
+	<i class="icon-calendar"></i>Wed, 13 Mar 2013
 </abbr>
 <span class="label">By</span>
 <a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
 <span class="label">Category</span>
-<a href="../category/booknotes.html"><i class="icon-folder-open"></i>BookNotes</a>. 
+<a href="../category/algorithm.html"><i class="icon-folder-open"></i>Algorithm</a>. 
 
 	
 <span class="label">Tags</span> 
-	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
-	<a href="../tag/suan-fa.html"><i class="icon-tag"></i>算法</a>
-	<a href="../tag/qsort.html"><i class="icon-tag"></i>qsort</a>
-	<a href="../tag/kuai-su-pai-xu.html"><i class="icon-tag"></i>快速排序</a>
+	<a href="../tag/leetcode.html"><i class="icon-tag"></i>leetcode</a>
+	<a href="../tag/dong-tai-gui-hua.html"><i class="icon-tag"></i>动态规划</a>
 </footer><!-- /.post-info --></div>
-		<div class="summary"><p>最近复习快速排序算法，无意中发现一篇由JON L. BENTLEY（编程珠矶的作者）和M. DOUGLAS McILROY（也是个牛人，见<a href="http://en.wikipedia.org/wiki/Douglas_McIlroy">wikipedia</a>)合著的一篇论文叫<a href="http://www.enseignement.polytechnique.fr/informatique/profs/Luc.Maranget/421/09/bentley93engineering.pdf">Engineering a Sort Function</a>.这篇文章详细讲述了怎么实现工业生产环境中适用的快速排序算法。记录下主要内容，权当做笔记。</p>
-<h2>排序函数的接口</h2>
-<p>C语言标准库中有个函数叫qsort，主要就是实现这么一个函数。先看一个整数的插入排序的实现，虽然很慢，但是在工业生成环境中还是非常有用的，这个后面会提到。定义这个排序函数的名字为iisort(integer insert sort).实现如下：</p>
-<div class="codehilite"><pre><span class="n">void</span> <span class="n">iisort</span><span class="p">(</span><span class="nb">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
-
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j ...</span></pre></div> 
-			<a class="btn primary xsmall" href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">more ...</a>
+		<div class="summary"><p>最近在准备暑期实习的笔试面试，就去leetcode上做题，为了养成总结和记录的好习惯，做做记录。</p>
+<p>题目大意是这样的：有一个字符串，最少做几次切割可以保证每个子串是回文的。比如abc，要做2次切割才能保证每个子串是回文的。</p>
+<p>这个题可以用动态规划来做。动态规划首先要找到最优子结构，这道题我们可以从后往前分析，单独看只有最后一个元素的子串，很显然，不用划分就是回文的，所以最小划分次数为0，我们可以记做dp[n-1][n-1] = 0,表示第n-1个元素到n-1个元素组成的子串需要0次划分就构成了回文的（我在说废话）.再看dp[i][n-1]从j处切割, 如果i..j是回文的，因为j+1..n-1的最小划分dp[j+1][n-1]之前已经求出来了，所以最小划分是min(dp[j+1][n-1]+1) j&gt;=i and j &lt;=n-1。这里要注意一点dp[n][n-1]初始化为-1 ...</p> 
+			<a class="btn primary xsmall" href="../zui-shao-hui-wen-fen-ge.html">more ...</a>
 		</div>
 	</div>	
 	<hr />

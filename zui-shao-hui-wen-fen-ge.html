@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>用github pages和pelican搭建免费的个人博客</title>
+    <title>最少回文分割</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -69,7 +69,7 @@
           <div class="nav-collapse">
             <ul class="nav">
                                           			  <li class="divider-vertical"></li>
-                                              <li >
+                                              <li class="active">
                     <a href="./category/Algorithm.html">
 						<i class="icon-folder-open icon-large"></i>Algorithm
 					</a>
@@ -79,7 +79,7 @@
 						<i class="icon-folder-open icon-large"></i>BookNotes
 					</a>
                   </li>
-                                <li class="active">
+                                <li >
                     <a href="./category/tech.html">
 						<i class="icon-folder-open icon-large"></i>tech
 					</a>
@@ -105,8 +105,8 @@
 			<h1>
 				<a href=""
 					rel="bookmark" 
-					title="Permalink to 用github pages和pelican搭建免费的个人博客">
-					用github pages和pelican搭建免费的个人博客 
+					title="Permalink to 最少回文分割">
+					最少回文分割 
 				</a>
 				 
 			</h1> 
@@ -115,76 +115,59 @@
 		<div class="well">
 			<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-01-16T00:00:00">
-	<i class="icon-calendar"></i>Wed, 16 Jan 2013
+<abbr class="published" title="2013-03-13T00:00:00">
+	<i class="icon-calendar"></i>Wed, 13 Mar 2013
 </abbr>
 <span class="label">By</span>
 <a href="./author/mrking.html"><i class="icon-user"></i>Mr.King</a>
 <span class="label">Category</span>
-<a href="./category/tech.html"><i class="icon-folder-open"></i>tech</a>. 
+<a href="./category/algorithm.html"><i class="icon-folder-open"></i>Algorithm</a>. 
 
 	
 <span class="label">Tags</span> 
-	<a href="./tag/github-pages.html"><i class="icon-tag"></i>github pages</a>
-	<a href="./tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="./tag/markdown.html"><i class="icon-tag"></i>markdown</a>
+	<a href="./tag/leetcode.html"><i class="icon-tag"></i>leetcode</a>
+	<a href="./tag/dong-tai-gui-hua.html"><i class="icon-tag"></i>动态规划</a>
 </footer><!-- /.post-info -->		</div>
-		<p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
-<p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
-<p>首先安装pelican：</p>
-<blockquote>
-<p>pip install pelican</p>
-</blockquote>
-<p>创建一个blog目录：</p>
-<blockquote>
-<p>mkdir yourblog</p>
-<p>cd yourblog</p>
-</blockquote>
-<p>创建一个博客：</p>
-<blockquote>
-<p>pelican-quickstart</p>
-</blockquote>
-<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改。</p>
-<p>接着，在github上创建一个项目，比如：myblog。把这个项目git clone到 yourblog这个文件夹下面。进入这个目录：</p>
-<blockquote>
-<p>cd myblog</p>
-</blockquote>
-<p>然后，创建一个没有父节点的分支gh-pages。因为github规定，只有该分支中的页面，才会生成网页文件。</p>
-<blockquote>
-<p>git checkout --orphan gh-pages</p>
-</blockquote>
-<p>接着，我们就可以用pelican写博客了，pelican支持markdown等流行的文档格式。我用mardown举例，具体怎么写可以去看pelican的<a href="http://docs.getpelican.com/en/3.1.1/">文档</a>.
-进入content目录，用编辑器创建一个文件，写入博客内容：</p>
-<blockquote>
-<p>Date: 2010-12-03 #日期</p>
-<p>Title: My super title ＃标题</p>
-<p>Tags: thats, awesome #标签 </p>
-<p>Category: tech #分类</p>
-<p>文章内容</p>
-</blockquote>
-<p>其中Date和Title是必须的，其它的可以不写，分类的话不写就是默认分类，默认分类在配置文件中设置，当然如果该文件位于content目录中某个子目录中时，如./content/tech，那pelican就把这篇文章分类为子目录名tech。还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。</p>
-<p>写完了文章，就该发布了！回到yourblog的根目录，用下面的命令：</p>
-<blockquote>
-<p>pelican -s pelicanconf.py content -o myblog</p>
-</blockquote>
-<p>这样就会把content中的md文件，翻译成html静态页面，这些页面存放在myblog中。进入myblog目录,提交文章到github</p>
-<blockquote>
-<p>git add .</p>
-<p>git commit -m "first blog"</p>
-<p>git push -u origin gh-pages</p>
-</blockquote>
-<p>上传成功之后，第一次需要等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.</p>
-<p>关于github和git的使用，这里就不说了。<strong>友情提示</strong>：别忘了在github上配置RSA公钥</p>
-<p>下面讲讲<strong>域名绑定</strong></p>
-<p>用我的域名kaifengjin.com做为例子
-在文章的输出目录，即myblog目录，创建一个文件CNAME，里面写上:<strong>www.kaifengjin.com</strong> git push到github。然后在域名服务商那，把域名对应的ip改成username.github.com对应的ip即可（有些域名服务商改完后可能要等段时间，最多可能到1天，改完后ping下域名看看是否对应的是改后的ip）。接下来就可以用域名访问自己的博客了！</p>
-<p>ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在配置文件中加上THEME = bootstrap2,然后在发布命令中加入-t [主题目录所在路径]即可，即pelican -s pelicanconf.py content -o myblog -t bootsrap2</p>
+		<p>最近在准备暑期实习的笔试面试，就去leetcode上做题，为了养成总结和记录的好习惯，做做记录。</p>
+<p>题目大意是这样的：有一个字符串，最少做几次切割可以保证每个子串是回文的。比如abc，要做2次切割才能保证每个子串是回文的。</p>
+<p>这个题可以用动态规划来做。动态规划首先要找到最优子结构，这道题我们可以从后往前分析，单独看只有最后一个元素的子串，很显然，不用划分就是回文的，所以最小划分次数为0，我们可以记做dp[n-1][n-1] = 0,表示第n-1个元素到n-1个元素组成的子串需要0次划分就构成了回文的（我在说废话）.再看dp[i][n-1]从j处切割, 如果i..j是回文的，因为j+1..n-1的最小划分dp[j+1][n-1]之前已经求出来了，所以最小划分是min(dp[j+1][n-1]+1) j&gt;=i and j &lt;=n-1。这里要注意一点dp[n][n-1]初始化为-1，处理整个子串本身为回文的情况。</p>
+<div class="codehilite"><pre><span class="n">public</span> <span class="n">class</span> <span class="n">PalindromePartitioning2</span> <span class="p">{</span>
+     <span class="n">public</span> <span class="nb">int</span> <span class="n">minCut</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+            <span class="sr">//</span> <span class="n">Start</span> <span class="n">typing</span> <span class="n">your</span> <span class="n">Java</span> <span class="n">solution</span> <span class="n">below</span>
+            <span class="sr">//</span> <span class="n">DO</span> <span class="n">NOT</span> <span class="nb">write</span> <span class="n">main</span><span class="p">()</span> <span class="n">function</span>
+       <span class="nb">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="nb">length</span><span class="p">();</span>
+
+     <span class="sr">//c</span><span class="n">ut</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="err">表示</span><span class="sr">s[i..n-1]</span><span class="err">需要的最小的切割</span>
+     <span class="sr">//</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="err">表示</span><span class="sr">s[i..j]</span><span class="err">是否是回文</span>
+     <span class="nb">int</span> <span class="n">cut</span><span class="o">[]=</span> <span class="k">new</span> <span class="nb">int</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+     <span class="n">boolean</span> <span class="n">p</span><span class="o">[][]</span> <span class="o">=</span> <span class="k">new</span> <span class="n">boolean</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">n</span><span class="p">];</span>
+
+     <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+         <span class="n">cut</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">Integer</span><span class="o">.</span><span class="n">MAX_VALUE</span><span class="p">;</span>
+         <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span><span class="sr">//</span><span class="err">肯定是回文</span>
+     <span class="p">}</span>
+     <span class="n">cut</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+     <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+         <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+             <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="p">((</span><span class="n">s</span><span class="o">.</span><span class="n">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">charAt</span><span class="p">(</span><span class="n">j</span><span class="p">))</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;=</span><span class="mi">2</span> <span class="o">||</span> <span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]));</span><span class="sr">//</span><span class="err">判断回文，也是一个递归</span>
+             <span class="k">if</span> <span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+                 <span class="n">cut</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">cut</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">cut</span><span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+             <span class="p">}</span>
+         <span class="p">}</span>
+     <span class="p">}</span>
+
+     <span class="k">return</span> <span class="n">cut</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>         
+ <span class="p">}</span>
+
+<span class="p">}</span>
+</pre></div>
 		</div><!-- /.entry-content -->
 				<div class="comments">
 		<h2>Comments !</h2>
 			<div id="disqus_thread"></div>
 			<script type="text/javascript">
-			   var disqus_identifier = "yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html";
+			   var disqus_identifier = "zui-shao-hui-wen-fen-ge.html";
 			   (function() {
 				var dsq = document.createElement('script'); 
 				dsq.type = 'text/javascript'; dsq.async = true;
