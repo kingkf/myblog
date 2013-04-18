@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mr.King的博客 - github pages</title>
+    <title>Mr.King的博客 - 程序员</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -101,11 +101,11 @@
         <div class="span9" id="content">
                     
 		<div class='article'>
-		<h1><a href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">用github pages和pelican搭建免费的个人博客</a></h1>
+		<h1><a href="../wei-jie-jue-shi-ji-wen-ti-bian-cheng-shi-kuai-le-de-zui-jin-er-san-shi-you-gan.html">为解决实际问题编程是快乐的--最近二三事有感</a></h1>
 		<div class="well small"><footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-01-16T00:00:00">
-	<i class="icon-calendar"></i>Wed, 16 Jan 2013
+<abbr class="published" title="2013-04-18T00:00:00">
+	<i class="icon-calendar"></i>Thu, 18 Apr 2013
 </abbr>
 <span class="label">By</span>
 <a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
@@ -114,27 +114,16 @@
 
 	
 <span class="label">Tags</span> 
-	<a href="../tag/github-pages.html"><i class="icon-tag"></i>github pages</a>
-	<a href="../tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="../tag/markdown.html"><i class="icon-tag"></i>markdown</a>
+	<a href="../tag/cheng-xu-yuan.html"><i class="icon-tag"></i>程序员</a>
+	<a href="../tag/ji-zhu-de-li-liang.html"><i class="icon-tag"></i>技术的力量</a>
 </footer><!-- /.post-info --></div>
-		<div class="summary"><p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
-<p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
-<p>首先安装pelican：</p>
-<blockquote>
-<p>pip install pelican</p>
-</blockquote>
-<p>创建一个blog目录：</p>
-<blockquote>
-<p>mkdir yourblog</p>
-<p>cd yourblog</p>
-</blockquote>
-<p>创建一个博客：</p>
-<blockquote>
-<p>pelican-quickstart</p>
-</blockquote>
-<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改 ...</p> 
-			<a class="btn primary xsmall" href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">more ...</a>
+		<div class="summary"><h2>程序员能解放劳动力</h2>
+<p>前段时间，一个学经管的高中同学写毕业论文需要分析一些数据，可是他没有数据，导师只给了他1500个中国的证券公司的简称，让他去百度新闻里用这些简称搜08，09，10，11四年分别有多少索引量。这同学看到excel表格里1500行就晕了，要知道每搜一个公司就需要打开百度新闻的高级搜索，选定08年1月1日-08年12月31日(09,10,11都要做一遍)，这要让他自己做，估计得精神崩溃！于是求助我，我想了想，用python写了个简单的爬虫，帮他搞定了。由于催的很紧，而且我自己忙着实验室项目和找实习，程序写的很烂，没有高深的算法，完全没有可扩展性，可是确实解决了实际问题，我觉得很有成就感，在我心中编程就应该是这样的。</p>
+<h2>两行命令搞定</h2>
+<p>就在刚才，我女朋友向我求助，怎么把批量的图片转成pdf并且合并成一个pdf。她在windows下折腾了半天，又是百度又是装adobe什么的(好像adobe pdf免费的版本没有这个功能，还得去找盗版的更高级的一个工具)。由于我平常都是使用Linux，心想这种批量处理的活不是Linux最擅长的吗，让她把图片打包发给我，我用下面的两行命令瞬间搞定：</p>
+<div class="codehilite"><pre><span class="nv">$</span> <span class="nv">find</span> <span class="o">*.</span><span class="n">jpg</span> <span class="o">-</span><span class="nb">exec</span> <span class="n">convert</span> <span class="p">{}</span> <span class="p">{}</span><span class="o">.</span><span class="n">pdf</span> <span class="o">\</span><span class="p">;</span> 
+<span class="nv">$</span> <span class="nv">find</span> <span class="o">*.</span><span class="n">jpg</span><span class="o">.</span><span class="n">pdf ...</span></pre></div> 
+			<a class="btn primary xsmall" href="../wei-jie-jue-shi-ji-wen-ti-bian-cheng-shi-kuai-le-de-zui-jin-er-san-shi-you-gan.html">more ...</a>
 		</div>
 	</div>	
 	<hr />
