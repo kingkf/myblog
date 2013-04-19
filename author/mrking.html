@@ -75,8 +75,8 @@
 					</a>
                   </li>
                                 <li >
-                    <a href="../category/bookNotes.html">
-						<i class="icon-folder-open icon-large"></i>bookNotes
+                    <a href="../category/booknotes.html">
+						<i class="icon-folder-open icon-large"></i>booknotes
 					</a>
                   </li>
                                 <li >
@@ -101,6 +101,40 @@
         <div class="span9" id="content">
                     
 		<div class='article'>
+		<h1><a href="../dao-jian-dan-de-ti-he-ge-kan-si-hao-wu-guan-xi-de-suan-fa.html">一道简单的题和一个看似毫无关系的算法</a></h1>
+		<div class="well small"><footer class="post-info">
+<span class="label">Date</span>
+<abbr class="published" title="2013-04-19T00:00:00">
+	<i class="icon-calendar"></i>Fri, 19 Apr 2013
+</abbr>
+<span class="label">By</span>
+<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
+<span class="label">Category</span>
+<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>. 
+
+	
+<span class="label">Tags</span> 
+	<a href="../tag/zi-fu-chuan.html"><i class="icon-tag"></i>字符串</a>
+	<a href="../tag/kuai-pai-fen-ge.html"><i class="icon-tag"></i>快排分割</a>
+</footer><!-- /.post-info --></div>
+		<div class="summary"><p>有这么一道题：输入一个字符串，将字符串中重复的字符去掉。要求空间复杂度为O(1)。初看这道题，
+感觉很简单，可是仔细一想，应该怎么做呢？
+先来看看算法导论上的快排划分方法(用python表示)：</p>
+<div class="codehilite"><pre><span class="n">def</span> <span class="n">PARTITION</span><span class="err">（</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">p</span><span class="o">-</span><span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">x:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">r ...</span></pre></div> 
+			<a class="btn primary xsmall" href="../dao-jian-dan-de-ti-he-ge-kan-si-hao-wu-guan-xi-de-suan-fa.html">more ...</a>
+		</div>
+	</div>	
+	<hr />
+		<div class='article'>
 		<h1><a href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">高效的快速排序实现</a></h1>
 		<div class="well small"><footer class="post-info">
 <span class="label">Date</span>
@@ -110,7 +144,7 @@
 <span class="label">By</span>
 <a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
 <span class="label">Category</span>
-<a href="../category/booknotes.html"><i class="icon-folder-open"></i>bookNotes</a>. 
+<a href="../category/booknotes.html"><i class="icon-folder-open"></i>booknotes</a>. 
 
 	
 <span class="label">Tags</span> 
@@ -270,7 +304,7 @@
 <span class="label">By</span>
 <a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
 <span class="label">Category</span>
-<a href="../category/booknotes.html"><i class="icon-folder-open"></i>bookNotes</a>. 
+<a href="../category/booknotes.html"><i class="icon-folder-open"></i>booknotes</a>. 
 
 	
 <span class="label">Tags</span> 
@@ -340,8 +374,8 @@
 </a>
 </li>
 <li>
-<a href="../category/bookNotes.html">
-    <i class="icon-folder-open icon-large"></i>bookNotes
+<a href="../category/booknotes.html">
+    <i class="icon-folder-open icon-large"></i>booknotes
 </a>
 </li>
 <li>
@@ -352,6 +386,11 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
+    <a href="../tag/技术的力量.html">
+        <i class="icon-tag icon-large"></i>技术的力量
+    </a>
+</li>
+<li class="tag-4">
     <a href="../tag/快速排序.html">
         <i class="icon-tag icon-large"></i>快速排序
     </a>
@@ -361,9 +400,19 @@
         <i class="icon-tag icon-large"></i>github pages
     </a>
 </li>
-<li class="tag-1">
-    <a href="../tag/指针.html">
-        <i class="icon-tag icon-large"></i>指针
+<li class="tag-4">
+    <a href="../tag/leetcode.html">
+        <i class="icon-tag icon-large"></i>leetcode
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/快排分割.html">
+        <i class="icon-tag icon-large"></i>快排分割
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/字符串.html">
+        <i class="icon-tag icon-large"></i>字符串
     </a>
 </li>
 <li class="tag-4">
@@ -372,8 +421,13 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="../tag/leetcode.html">
-        <i class="icon-tag icon-large"></i>leetcode
+    <a href="../tag/qsort.html">
+        <i class="icon-tag icon-large"></i>qsort
+    </a>
+</li>
+<li class="tag-1">
+    <a href="../tag/指针.html">
+        <i class="icon-tag icon-large"></i>指针
     </a>
 </li>
 <li class="tag-1">
@@ -386,34 +440,24 @@
         <i class="icon-tag icon-large"></i>程序员
     </a>
 </li>
-<li class="tag-4">
-    <a href="../tag/markdown.html">
-        <i class="icon-tag icon-large"></i>markdown
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/技术的力量.html">
-        <i class="icon-tag icon-large"></i>技术的力量
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/动态规划.html">
-        <i class="icon-tag icon-large"></i>动态规划
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/qsort.html">
-        <i class="icon-tag icon-large"></i>qsort
-    </a>
-</li>
 <li class="tag-1">
     <a href="../tag/算法.html">
         <i class="icon-tag icon-large"></i>算法
     </a>
 </li>
 <li class="tag-4">
+    <a href="../tag/markdown.html">
+        <i class="icon-tag icon-large"></i>markdown
+    </a>
+</li>
+<li class="tag-4">
     <a href="../tag/Linus.html">
         <i class="icon-tag icon-large"></i>Linus
+    </a>
+</li>
+<li class="tag-4">
+    <a href="../tag/动态规划.html">
+        <i class="icon-tag icon-large"></i>动态规划
     </a>
 </li>
 

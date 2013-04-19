@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>用github pages和pelican搭建免费的个人博客</title>
+    <title>一道简单的题和一个看似毫无关系的算法</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -105,8 +105,8 @@
 			<h1>
 				<a href=""
 					rel="bookmark" 
-					title="Permalink to 用github pages和pelican搭建免费的个人博客">
-					用github pages和pelican搭建免费的个人博客 
+					title="Permalink to 一道简单的题和一个看似毫无关系的算法">
+					一道简单的题和一个看似毫无关系的算法 
 				</a>
 				 
 			</h1> 
@@ -115,8 +115,8 @@
 		<div class="well">
 			<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2013-01-16T00:00:00">
-	<i class="icon-calendar"></i>Wed, 16 Jan 2013
+<abbr class="published" title="2013-04-19T00:00:00">
+	<i class="icon-calendar"></i>Fri, 19 Apr 2013
 </abbr>
 <span class="label">By</span>
 <a href="./author/mrking.html"><i class="icon-user"></i>Mr.King</a>
@@ -125,66 +125,49 @@
 
 	
 <span class="label">Tags</span> 
-	<a href="./tag/github-pages.html"><i class="icon-tag"></i>github pages</a>
-	<a href="./tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="./tag/markdown.html"><i class="icon-tag"></i>markdown</a>
+	<a href="./tag/zi-fu-chuan.html"><i class="icon-tag"></i>字符串</a>
+	<a href="./tag/kuai-pai-fen-ge.html"><i class="icon-tag"></i>快排分割</a>
 </footer><!-- /.post-info -->		</div>
-		<p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
-<p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
-<p>首先安装pelican：</p>
-<blockquote>
-<p>pip install pelican</p>
-</blockquote>
-<p>创建一个blog目录：</p>
-<blockquote>
-<p>mkdir yourblog</p>
-<p>cd yourblog</p>
-</blockquote>
-<p>创建一个博客：</p>
-<blockquote>
-<p>pelican-quickstart</p>
-</blockquote>
-<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改。</p>
-<p>接着，在github上创建一个项目，比如：myblog。把这个项目git clone到 yourblog这个文件夹下面。进入这个目录：</p>
-<blockquote>
-<p>cd myblog</p>
-</blockquote>
-<p>然后，创建一个没有父节点的分支gh-pages。因为github规定，只有该分支中的页面，才会生成网页文件。</p>
-<blockquote>
-<p>git checkout --orphan gh-pages</p>
-</blockquote>
-<p>接着，我们就可以用pelican写博客了，pelican支持markdown等流行的文档格式。我用mardown举例，具体怎么写可以去看pelican的<a href="http://docs.getpelican.com/en/3.1.1/">文档</a>.
-进入content目录，用编辑器创建一个文件，写入博客内容：</p>
-<blockquote>
-<p>Date: 2010-12-03 #日期</p>
-<p>Title: My super title ＃标题</p>
-<p>Tags: thats, awesome #标签 </p>
-<p>Category: tech #分类</p>
-<p>文章内容</p>
-</blockquote>
-<p>其中Date和Title是必须的，其它的可以不写，分类的话不写就是默认分类，默认分类在配置文件中设置，当然如果该文件位于content目录中某个子目录中时，如./content/tech，那pelican就把这篇文章分类为子目录名tech。还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。</p>
-<p>写完了文章，就该发布了！回到yourblog的根目录，用下面的命令：</p>
-<blockquote>
-<p>pelican -s pelicanconf.py content -o myblog</p>
-</blockquote>
-<p>这样就会把content中的md文件，翻译成html静态页面，这些页面存放在myblog中。进入myblog目录,提交文章到github</p>
-<blockquote>
-<p>git add .</p>
-<p>git commit -m "first blog"</p>
-<p>git push -u origin gh-pages</p>
-</blockquote>
-<p>上传成功之后，第一次需要等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.</p>
-<p>关于github和git的使用，这里就不说了。<strong>友情提示</strong>：别忘了在github上配置RSA公钥</p>
-<p>下面讲讲<strong>域名绑定</strong></p>
-<p>用我的域名kaifengjin.com做为例子
-在文章的输出目录，即myblog目录，创建一个文件CNAME，里面写上:<strong>www.kaifengjin.com</strong> git push到github。然后在域名服务商那，把域名对应的ip改成username.github.com对应的ip即可（有些域名服务商改完后可能要等段时间，最多可能到1天，改完后ping下域名看看是否对应的是改后的ip）。接下来就可以用域名访问自己的博客了！</p>
-<p>ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在配置文件中加上THEME = bootstrap2,然后在发布命令中加入-t [主题目录所在路径]即可，即pelican -s pelicanconf.py content -o myblog -t bootsrap2</p>
+		<p>有这么一道题：输入一个字符串，将字符串中重复的字符去掉。要求空间复杂度为O(1)。初看这道题，
+感觉很简单，可是仔细一想，应该怎么做呢？
+先来看看算法导论上的快排划分方法(用python表示)：</p>
+<div class="codehilite"><pre><span class="n">def</span> <span class="n">PARTITION</span><span class="err">（</span><span class="n">A</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">p</span><span class="o">-</span><span class="mi">1</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">x:</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">[</span><span class="n">r</span><span class="p">],</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+
+
+<p>快排划分是为了将待排序的数组根据选取的主元x，将数组分成两部分：比主元小的部分和比主元大的部分。上面的划分方式采用了两个下标i，j。
+i下标始终指向小于主元的元素和待处理的元素的边界；j下标指向待分类的元素。如果A[j] &lt;= x,这表明小于x的元素集合又多了个成员，那么下标i自然要加1，
+这时i对应的元素要么是还没被处理的，要么是大于x的，但是j对应的元素一定是小于x的，所以很自然的，将A[i]和A[j]进行了交换。这样小于等于i的下标对应的元素
+始终属于小于x的阵营。当处理完所有元素后，i左边的就是小于x阵营的，右边就是大于y阵营的。</p>
+<p>这种划分思想恰好可以用于这道题，而且这种划分是原地的，满足O(1)的空间复杂度。那怎么跟这题联系起来呢？我们可以把字符串划分成两部分，不重复的字符和已经出现过的字符。
+也可以用两个下标i，j。小于i的部分表示不重复的字符，大于i的部分表示待处理或者已经出现的字符；j表示当前的字符，如果当前字符没有出现过，则将当前的字符划入小于i的那部分阵营。而且由于最后只需要得到小于i的部分，所以连交换都不需要，直接然A[i] = A[j]就行了。伪码如下：</p>
+<div class="codehilite"><pre><span class="n">def</span> <span class="n">rmdup</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#a[0]肯定是唯一的，所以先把a[0]纳入不重复阵营。</span>
+
+    <span class="k">for</span> <span class="n">j</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">a</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="err">下标小于</span><span class="n">i</span><span class="err">的阵营中还没有</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
+            <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="c1">#把a[j]加入没重复字符阵营</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#更新i下标，保证小于i的下标对应的元素都是唯一的</span>
+    <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#大于i的部分都是重复的，舍弃</span>
+</pre></div>
+
+
+<p>至于怎么判断下标小于i的阵营中是否有a[j]，如果题目给出了字符的范围，如ascii码，那可以用一个数组去标记字符是否出现。如果没有给出范围，那只能从头到i-1扫描一遍判断是否出现。具体实现还要考虑些细节，参见：https://gist.github.com/kingkf/5420157</p>
 		</div><!-- /.entry-content -->
 				<div class="comments">
 		<h2>Comments !</h2>
 			<div id="disqus_thread"></div>
 			<script type="text/javascript">
-			   var disqus_identifier = "yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html";
+			   var disqus_identifier = "dao-jian-dan-de-ti-he-ge-kan-si-hao-wu-guan-xi-de-suan-fa.html";
 			   (function() {
 				var dsq = document.createElement('script'); 
 				dsq.type = 'text/javascript'; dsq.async = true;
