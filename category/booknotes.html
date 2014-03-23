@@ -1,310 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Mr.King的博客 - booknotes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+        <meta charset="utf-8" />
+        <title>Mr.King的博客 - booknotes</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="../theme/css/bootstrap.css" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-	
-	.tag-1 {
-		font-size: 13pt;
-	}
-	
-	.tag-2 {
-		font-size: 10pt;
-	}
-	
-	.tag-2 {
-		font-size: 8pt;
-	}
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
 
-	.tag-4 {
-		font-size: 6pt;
-	}
-	
-    </style>
-    <link href="../theme/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="../theme/css/font-awesome.css" rel="stylesheet">
-	
-    <link href="../theme/css/pygments.css" rel="stylesheet">
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Mr.King的博客 </a></h1>
+                <nav><ul>
+                    <li><a href="/category/algorithm.html">algorithm</a></li>
+                    <li class="active"><a href="/category/booknotes.html">booknotes</a></li>
+                    <li><a href="/category/tech.html">tech</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/gao-xiao-de-kuai-su-pai-xu-shi-xian.html">高效的快速排序实现</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2013-03-08T00:00:00">
+                Fri 08 March 2013
+        </abbr>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../theme/images/favicon.ico">
-    <link rel="apple-touch-icon" href="../theme/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../theme/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../theme/images/apple-touch-icon-114x114.png">
-
-    <link href="../" type="application/atom+xml" rel="alternate" title="Mr.King的博客 ATOM Feed" />
-    
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="../index.html">Mr.King的博客 </a>
-          <div class="nav-collapse">
-            <ul class="nav">
-                                          			  <li class="divider-vertical"></li>
-                                              <li >
-                    <a href="../category/algorithm.html">
-						<i class="icon-folder-open icon-large"></i>algorithm
-					</a>
-                  </li>
-                                <li class="active">
-                    <a href="../category/booknotes.html">
-						<i class="icon-folder-open icon-large"></i>booknotes
-					</a>
-                  </li>
-                                <li >
-                    <a href="../category/tech.html">
-						<i class="icon-folder-open icon-large"></i>tech
-					</a>
-                  </li>
-              			  
-			  <ul class="nav pull-right">
-				<li><a href="../archives.html"><i class="icon-th-list"></i>Archives</a></li>
-			  </ul>
-			  
-            </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="span9" id="content">
-                    
-		<div class='article'>
-		<h1><a href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">高效的快速排序实现</a></h1>
-		<div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-03-08T00:00:00">
-	<i class="icon-calendar"></i>Fri, 08 Mar 2013
-</abbr>
-<span class="label">By</span>
-<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
-<span class="label">Category</span>
-<a href="../category/booknotes.html"><i class="icon-folder-open"></i>booknotes</a>. 
-
-	
-<span class="label">Tags</span> 
-	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
-	<a href="../tag/suan-fa.html"><i class="icon-tag"></i>算法</a>
-	<a href="../tag/qsort.html"><i class="icon-tag"></i>qsort</a>
-	<a href="../tag/kuai-su-pai-xu.html"><i class="icon-tag"></i>快速排序</a>
-</footer><!-- /.post-info --></div>
-		<div class="summary"><p>最近复习快速排序算法，无意中发现一篇由JON L. BENTLEY（编程珠矶的作者）和M. DOUGLAS McILROY（也是个牛人，见<a href="http://en.wikipedia.org/wiki/Douglas_McIlroy">wikipedia</a>)合著的一篇论文叫<a href="http://www.enseignement.polytechnique.fr/informatique/profs/Luc.Maranget/421/09/bentley93engineering.pdf">Engineering a Sort Function</a>.这篇文章详细讲述了怎么实现工业生产环境中适用的快速排序算法。记录下主要内容，权当做笔记。</p>
+        <address class="vcard author">
+                By <a class="url fn" href="/author/mrking.html">Mr.King</a>
+        </address>
+<p>In <a href="/category/booknotes.html">booknotes</a>. </p>
+<p>tags: <a href="/tag/du-shu-bi-ji.html">读书笔记</a><a href="/tag/suan-fa.html">算法</a><a href="/tag/qsort.html">qsort</a><a href="/tag/kuai-su-pai-xu.html">快速排序</a></p>
+</footer><!-- /.post-info --><p>最近复习快速排序算法，无意中发现一篇由JON L. BENTLEY（编程珠矶的作者）和M. DOUGLAS McILROY（也是个牛人，见<a href="http://en.wikipedia.org/wiki/Douglas_McIlroy">wikipedia</a>)合著的一篇论文叫<a href="http://www.enseignement.polytechnique.fr/informatique/profs/Luc.Maranget/421/09/bentley93engineering.pdf">Engineering a Sort Function</a>.这篇文章详细讲述了怎么实现工业生产环境中适用的快速排序算法。记录下主要内容，权当做笔记。</p>
 <h2>排序函数的接口</h2>
 <p>C语言标准库中有个函数叫qsort，主要就是实现这么一个函数。先看一个整数的插入排序的实现，虽然很慢，但是在工业生成环境中还是非常有用的，这个后面会提到。定义这个排序函数的名字为iisort(integer insert sort).实现如下：</p>
-<div class="codehilite"><pre><span class="n">void</span> <span class="n">iisort</span><span class="p">(</span><span class="nb">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">iisort</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
 
     <span class="k">for</span> <span class="p">(</span><span class="n">i</span>  <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j ...</span></pre></div> 
-			<a class="btn primary xsmall" href="../gao-xiao-de-kuai-su-pai-xu-shi-xian.html">more ...</a>
-		</div>
-	</div>	
-	<hr />
-		<div class='article'>
-		<h1><a href="../zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">最大子段和的分治算法--算法导论读书笔记</a></h1>
-		<div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-03-03T00:00:00">
-	<i class="icon-calendar"></i>Sun, 03 Mar 2013
-</abbr>
-<span class="label">By</span>
-<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
-<span class="label">Category</span>
-<a href="../category/booknotes.html"><i class="icon-folder-open"></i>booknotes</a>. 
+        <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">];</span> <span class="n">j</span><span class="o">--</span><span class="p">)</span>
+            <span class="n">iswap</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
 
-	
-<span class="label">Tags</span> 
-	<a href="../tag/du-shu-bi-ji.html"><i class="icon-tag"></i>读书笔记</a>
-	<a href="../tag/suan-fa.html"><i class="icon-tag"></i>算法</a>
-</footer><!-- /.post-info --></div>
-		<div class="summary"><p>问题描述：一个有N个整数元素的一维数组A，找出这个数组的一个子数组，要求这个子数组连续，非空，而且子数组的元素和是所有子数组中最大的。</p>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>通俗的说就是每次插入跟前面一个元素比较，前面的元素比当前的大，就交互，没当前的大就处理下一个元素。iswap是一个整数交互函数，用于交换a[j]和a[j-1]。对于一个随机排列的数组，插入排序的比较次数一般为n^2/4不会超过n^2/2。这个iisort只能支持整数，下面定义一个比较通用的排序函数：</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">qsort</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">es</span><span class="p">,</span> <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">cmp</span><span class="p">)());</span>
+</pre></div>
+
+
+<p>这个和c语言标准库<stdlib.h>中定义的void qsort(void <em>, size_t, size_t, int (</em>)(const void <em>, const void </em>));有点不同，但基本意思是一样的。第一个参数是一个指针，指向待排序的数组（不一定是char型数组哦，c语言的指针很灵活的，定义成char型是因为char占一个字节，方便转换成其它任意类型。比如四个字节的整型，遍历下个元素的时候只要把指针加4就可以了); 第二个参数表示待排序的元素个数；第三个参数表示每个元素所占的字节大小；第三个参数是一个比较函数，传入两个指针返回小于0，等于0，大于0的整数，分别对应于第一个指针指向的内容小于，等于，大于第二个指针指向的内容。这其实是C语言的回调函数，因为有些数据类型计算机不知道比较规则，不知道怎么比较大小，比如用户自定义了一个结构体，结构体的每个实例之间的大小关系，c语言是不知道的。就用这种方式把比较大小的规则通过回调函数的形式交给用户去制定。</p>
+<p>下面按照这种通用的形式重写之前的插入排序函数：</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">isort</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="kt">int</span> <span class="n">es</span><span class="p">,</span> <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">cmp</span><span class="p">)())</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="o">*</span><span class="n">pj</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">pi</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">es</span><span class="p">;</span> <span class="n">pi</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">+</span><span class="n">n</span><span class="o">*</span><span class="n">es</span><span class="p">;</span> <span class="n">pi</span> <span class="o">+=</span> <span class="n">es</span><span class="p">)</span> <span class="c1">//一个元素是es个字节，所以a+es表示指向第二个元素 </span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">pj</span> <span class="o">=</span> <span class="n">pi</span><span class="p">;</span> <span class="n">pj</span> <span class="o">&gt;</span> <span class="n">a</span> <span class="o">&amp;&amp;</span> <span class="n">cmp</span><span class="p">(</span><span class="n">pj</span><span class="o">-</span><span class="n">es</span><span class="p">,</span> <span class="n">pj</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">;</span> <span class="n">pj</span> <span class="o">-=</span> <span class="n">es</span><span class="p">)</span>
+            <span class="n">swap</span><span class="p">(</span><span class="n">pj</span><span class="p">,</span> <span class="n">pj</span><span class="o">-</span><span class="n">es</span><span class="p">,</span> <span class="n">es</span><span class="p">);</span><span class="c1">//交互这两块内存</span>
+
+<span class="p">}</span>
+</pre></div>
+
+
+<p>交互内存的函数实现如下：</p>
+<p>void swap(char <em>i, char </em>j, int n)
+   {
+       do {
+           char c = <em>i;
+           </em>i++ = <em>j;
+           </em>j++ = c;
+       }while(--n&gt;0);
+   }</p>
+<p>就是一个字节一个字节的交互，总共每个元素是n字节。</p>
+<h2>qsort的简单实现</h2>
+<p>快速排序主要是分治的思想，通过围绕一个元素将数组分成两部分，一部分全都比这个元素小，一部分比这个元素大，然后按相同的方法分别处理这两部分。快速排序是否高效主要体现在划分方法是否好。先用Lomuto提出的划分方法实现一个可用的快速排序. 这也是算法导论第二版介绍的划分方法，这里我按照自己的理解写了遍实现，跟原论文有点不一样:</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">iqsort0</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">key</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">key</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">iqsort0</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+    <span class="n">iqsort0</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">2</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>我是按照算法导论上参照最后一个元素划分，原论文是按照第一个，其实差不多，只是我比较习惯按照最后一个了。Hoare(发明快速排序的人)证明了对于随机排列的元素不想同的数组，quicksort需要进行2nlnn∼1.386nlnn次比较。不幸的是，按照Lomuto的划分方法，当数组是排序好的情况下，需要n^2/2次比较。当数组元素全部相同时，也需要平方次比较。为了避免快排的最坏情况发生，Hore建议划分的时候围绕一个随机的元素划分，而不是固定的位置选取元素。</p>
+<p>下面讲一种更高效的实现方法（貌似严蔚敏的数据结构那本书上用的就是这种方法，但我不知道为什么下面的方法比上面的高效，有知道的求指导）</p>
+<p>用两个索引i，j。i从小到大遍历数组，j从大到小遍历数组。当i遇到比划分元素大的元素时，当j遇到比划分元素小的元素时，交换a[i]和a[j]，直到i&gt;j。下面的实现结合了随机选取划分元素和这个划分方法：</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">iqsort1</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">swap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(;;)</span> <span class="p">{</span>
+        <span class="k">do</span><span class="p">{</span>
+            <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&amp;&amp;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">);</span>
+
+        <span class="k">do</span><span class="p">{</span>
+            <span class="n">j</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="n">j</span><span class="p">)</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="n">swap</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">swap</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span>
+    <span class="n">iqsort1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">j</span><span class="p">);</span>
+    <span class="n">iqsort1</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>这是针对整型的，对所有数据通用的实现如下：</p>
+<p>void qsort1(char <em>a, int n, int es, int (</em>cmp)())
+   {
+       int j;
+       char <em>pi, </em>pj, *pn;</p>
+<div class="highlight"><pre>   <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span>
+       <span class="k">return</span><span class="p">;</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">es</span><span class="p">;</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">es</span><span class="p">);</span><span class="c1">//注意这里的swap和针对整数的swap实现是不一样的，这里是按字节交换内存</span>
+    <span class="n">pi</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">pj</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">n</span><span class="o">*</span><span class="n">es</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(;;)</span> <span class="p">{</span>
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="n">pi</span> <span class="o">+=</span> <span class="n">es</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">cmp</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="n">pi</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">+</span><span class="n">n</span><span class="o">*</span><span class="n">es</span><span class="p">);</span>
+
+        <span class="k">do</span> <span class="p">{</span>
+            <span class="n">pj</span> <span class="o">-=</span> <span class="n">es</span><span class="p">;</span>
+        <span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">cmp</span><span class="p">(</span><span class="n">pj</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">pi</span> <span class="o">&gt;</span> <span class="n">pj</span><span class="p">)</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="n">swap</span><span class="p">(</span><span class="n">pi</span><span class="p">,</span> <span class="n">pj</span><span class="p">,</span> <span class="n">es</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">swap</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">pj</span><span class="p">,</span> <span class="n">es</span><span class="p">);</span>
+
+    <span class="n">j</span> <span class="o">=</span> <span class="p">(</span><span class="n">pj</span><span class="o">-</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">es</span><span class="p">;</span>
+    <span class="n">qsort1</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">es</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+    <span class="n">qsort1</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">es</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">es</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+</pre></div>
+
+
+<p>}</p>
+<h2>选择划分元素</h2>
+<p>随机选择划分元素的快速排序算法，需要Cn ∼ 1.386nlgn次比较次数。我们现在试着减少公式前面的常数系数。我们这么想，每次划分后数组实际上是形成了一个二叉树，要保证效率，那么就要尽可能保证二叉树的高度不高，也就是要保证二叉树是平衡的。如果每次我们选出的划分元素恰好是整个待排序数组的中间元素，那么这时效率是最高的。这时比较次数变成了nlgn。但是，找一个数组真正的中间元素，也是要耗费计算代价的。下面我们探索一种近似的方法，代价稍微小点。</p>
+<p>Hoare建议用一个数组的小样本的中位数作为划分元素，Singleton用一个数组的第一个元素，最后一个元素和中间的元素这三个元素的中间元素作为划分元素。如果用随机的三个元素的中间元素作为划分元素，能把比较次数的期望值降到12/7nlnn,约等于1.188nlnn。</p>
+<p>下面的程序实现了三个元素中找中间元素的算法：</p>
+<div class="highlight"><pre><span class="k">static</span> <span class="kt">char</span> <span class="o">*</span><span class="nf">med3</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">b</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">c</span><span class="p">,</span> <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">cmp</span><span class="p">)())</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">cmp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span>
+        <span class="p">(</span><span class="n">cmp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">b</span> <span class="o">:</span> <span class="n">cmp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">c</span> <span class="o">:</span> <span class="n">a</span><span class="p">)</span>
+       <span class="o">:</span><span class="p">(</span><span class="n">cmp</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">b</span> <span class="o">:</span> <span class="n">cmp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">c</span> <span class="o">:</span> <span class="n">a</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>为了更进一步的降低常数系数，我们需要寻找更好的计算一个数组中位数的算法。这里我们采用Tukey’ "ninther"算法，这是个伪中位数算法，关于这个算法，这篇<a href="http://www.johndcook.com/blog/2009/06/23/tukey-median-ninther/">博客</a>讲的比较详细。这里我大概描述下，就是取九个数，前三个数取中间大的数，中间三个数取中间大的数，后面三个数取中间大的数。最后，取出来的三个数取中间大的数。把这个数当作划分元素。这个过程最多耗费12次比较，这个数据对于大的数组来说是很小的开销，可是对于小的数组来说，是很大的开销。</p>
+<p>基于上面的原因，我们这么处理：对于小数组，直接用数组中间下标对应的元素作为中位数；对于中等规模的数组，取第一个数组下标对应的元素，中间数组下标对应的元素和最后数组下标对应的元素的中间大小的元素；对于大规模的数组，采用Tukey’"ninther"算法。至于元素的多少算小规模数组，多少算中等规模数组，多少算大规模数组，完全是经验数据。具体实现如下：</p>
+<div class="highlight"><pre><span class="n">pm</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="n">es</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">pl</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">pn</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">es</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">40</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">8</span><span class="p">)</span><span class="o">*</span><span class="n">es</span><span class="p">;</span>
+        <span class="n">pl</span> <span class="o">=</span> <span class="n">med3</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span> <span class="n">pl</span><span class="o">+</span><span class="n">s</span><span class="p">,</span> <span class="n">pl</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+        <span class="n">pm</span> <span class="o">=</span> <span class="n">med3</span><span class="p">(</span><span class="n">pm</span><span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="n">pm</span><span class="p">,</span> <span class="n">pm</span><span class="o">+</span><span class="n">s</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+        <span class="n">pn</span> <span class="o">=</span> <span class="n">med3</span><span class="p">(</span><span class="n">pn</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="n">pn</span><span class="o">-</span><span class="n">s</span><span class="p">,</span> <span class="n">pn</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">pm</span> <span class="o">=</span> <span class="n">med3</span><span class="p">(</span><span class="n">pl</span><span class="p">,</span> <span class="n">pm</span><span class="p">,</span> <span class="n">pn</span><span class="p">,</span> <span class="n">cmp</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h2>数组中有相等元素的情况优化</h2>
+<p>用上述的划分方法配合qsort1函数，经过测试比普通的快排快了30-40倍，但是面对有很多重复数据的数组，变的很慢，比第七版unix中qsort的实现慢很多。原因是unix第七版中用的是扁平的划分，将数组划分为小于划分元素，等于划分元素，大于划分元素。但是第七版中划分的过程如下图：</p>
+<p><img alt="1" src="./pic/2013-03-08-1.png" /></p>
+<p>问号代表还未处理的元素，这让代码变得复杂和慢。因为在处理问号这部分时，小于划分元素的元素需要额外O(n)的交换代价去越过等于的那部分元素。我们这里采用如下图所示的划分过程，</p>
+<p><img alt="2" src="./pic/2013-03-08-3.png" /></p>
+<p>下标b往大的方向移动，小于的元素直接掠过，等于的元素和下标a对应的元素交换，遇到大于的元素停止。下标c采用类似的方式，最后交换b，c。这里就是多用了a，d两个下标去记录等于的情况，其它情况和qsort1类似，b，c就相当于i，j。对于整型的代码实现如下：</p>
+<div class="highlight"><pre><span class="kt">void</span> <span class="nf">iqsort2</span><span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">l</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">v</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="k">return</span><span class="p">;</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="n">n</span><span class="p">];</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">d</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(;;)</span> <span class="p">{</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">b</span> <span class="o">&lt;=</span> <span class="n">c</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">b</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span><span class="p">)</span> <span class="n">iswap</span><span class="p">(</span><span class="n">a</span><span class="o">++</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+       <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+   <span class="p">}</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="n">b</span> <span class="o">&amp;&amp;</span> <span class="n">x</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">v</span><span class="p">)</span> <span class="p">{</span>
+       <span class="k">if</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span><span class="p">)</span> <span class="n">iswap</span><span class="p">(</span><span class="n">d</span><span class="o">--</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+            <span class="n">c</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">b</span> <span class="o">&gt;</span> <span class="n">c</span><span class="p">)</span> <span class="k">break</span><span class="p">;</span>
+        <span class="n">iswap</span><span class="p">(</span><span class="n">b</span><span class="o">++</span><span class="p">,</span> <span class="n">c</span><span class="o">--</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">b</span><span class="o">-</span><span class="n">s</span><span class="p">;</span> <span class="n">s</span><span class="p">;</span> <span class="n">s</span><span class="o">--</span><span class="p">)</span> <span class="n">iswap</span><span class="p">(</span><span class="n">l</span><span class="o">++</span><span class="p">,</span> <span class="n">h</span><span class="o">++</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span><span class="c1">//把左边的等于部分往中间移</span>
+    <span class="n">s</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="n">c</span><span class="p">,</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">d</span><span class="p">);</span>
+    <span class="k">for</span><span class="p">(</span><span class="n">l</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="n">s</span><span class="p">;</span> <span class="n">s</span><span class="p">;</span> <span class="n">s</span><span class="o">--</span><span class="p">)</span> <span class="n">iswap</span><span class="p">(</span><span class="n">l</span><span class="o">++</span><span class="p">,</span> <span class="n">h</span><span class="o">++</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span><span class="c1">//右边的等于部分往中间移</span>
+    <span class="n">iqsort2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="o">-</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">iqsort2</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">n</span><span class="o">-</span><span class="p">(</span><span class="n">d</span><span class="o">-</span><span class="n">c</span><span class="p">),</span> <span class="n">d</span><span class="o">-</span><span class="n">c</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>上面算是总结了一个好的快速排序函数需要优化的地方，还有一点是当n&lt;7时，用插入排序代替快速排序，因为对于小数组，插入排序表现更好。最终实现的版本在语言层面上做了很多细致的优化，大家可以去看原文。这里主要想总结实现快速排序时在算法层面上需要考虑的因素。</p><p>There are <a href="/gao-xiao-de-kuai-su-pai-xu-shi-xian.html#disqus_thread">comments</a>.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html" rel="bookmark"
+                           title="Permalink to 最大子段和的分治算法--算法导论读书笔记">最大子段和的分治算法--算法导论读书笔记</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-03-03T00:00:00">
+                Sun 03 March 2013
+        </abbr>
+
+        <address class="vcard author">
+                By <a class="url fn" href="/author/mrking.html">Mr.King</a>
+        </address>
+<p>In <a href="/category/booknotes.html">booknotes</a>. </p>
+<p>tags: <a href="/tag/du-shu-bi-ji.html">读书笔记</a><a href="/tag/suan-fa.html">算法</a></p>
+</footer><!-- /.post-info -->                <p>问题描述：一个有N个整数元素的一维数组A，找出这个数组的一个子数组，要求这个子数组连续，非空，而且子数组的元素和是所有子数组中最大的。</p>
 <p>首先最简单的做法是暴力法，枚举所有子数组A[i..j],然后计算每个子数组的和，最后算出最大的。算法导论上没有讲这种算法，在后面的练习中要求读者自己实现，时间复杂度要求为O(n^2)。下面是我简单的实现：</p>
-<div class="codehilite"><pre><span class="nb">int</span> <span class="n">find_maximum_subarray</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="o">[]</span><span class="p">,</span> <span class="nb">int</span> <span class="n">n</span><span class="p">)</span>
+<div class="highlight"><pre><span class="kt">int</span> <span class="nf">find_maximum_subarray</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">[],</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
  <span class="p">{</span>
-     <span class="nb">int</span> <span class="n">maximum</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-     <span class="nb">int</span> <span class="n">sum</span><span class="p">;</span> 
-     <span class="nb">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
+     <span class="kt">int</span> <span class="n">maximum</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+     <span class="kt">int</span> <span class="n">sum</span><span class="p">;</span> 
+     <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">;</span>
      <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
          <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
          <span class="k">for</span> <span class="p">(</span><span class="n">j</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-             <span class="n">sum</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">j ...</span></pre></div> 
-			<a class="btn primary xsmall" href="../zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">more ...</a>
-		</div>
-	</div>	
-	<hr />
-	
-		        </div><!--/span-->
-      
-		<div class="span3 well sidebar-nav" id="sidebar">
-            <ul class="nav nav-list">
-<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
-    <li><i class="icon-external-link"></i><a href="http://docs.notmyidea.org/alexis/pelican/">Pelican</a></li>
-    <li><i class="icon-external-link"></i><a href="http://python.org">Python.org</a></li>
-    <li><i class="icon-external-link"></i><a href="http://jinja.pocoo.org">Jinja2</a></li>
-    <li><i class="icon-external-link"></i><a href="http://iguang.info">产品经理阿光机</a></li>
-    <li><i class="icon-external-link"></i><a href="http://coolshell.com">酷壳</a></li>
-    <li><i class="icon-external-link"></i><a href="http://news.dbanotes.net/">中国的HackNews</a></li>
-<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
-<li><a href="../" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
-    <li><a href="http://weibo.com/zybest"><i class="icon-我的新浪微博-sign icon-large"></i>我的新浪微博</a></li>
-    <li><a href="https://gist.github.com/kingkf"><i class="icon-Gists-sign icon-large"></i>Gists</a></li>
+             <span class="n">sum</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">j ...</span></pre></div>
+                <a class="readmore" href="/zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html">read more</a>
+<p>There are <a href="/zui-da-zi-duan-he-de-fen-zhi-suan-fa-suan-fa-dao-lun-du-shu-bi-ji.html#disqus_thread">comments</a>.</p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
 
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
-<li>
-<a href="../category/algorithm.html">
-    <i class="icon-folder-open icon-large"></i>algorithm
-</a>
-</li>
-<li>
-<a href="../category/booknotes.html">
-    <i class="icon-folder-open icon-large"></i>booknotes
-</a>
-</li>
-<li>
-<a href="../category/tech.html">
-    <i class="icon-folder-open icon-large"></i>tech
-</a>
-</li>
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-4">
-    <a href="../tag/技术的力量.html">
-        <i class="icon-tag icon-large"></i>技术的力量
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/快速排序.html">
-        <i class="icon-tag icon-large"></i>快速排序
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/github pages.html">
-        <i class="icon-tag icon-large"></i>github pages
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/leetcode.html">
-        <i class="icon-tag icon-large"></i>leetcode
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/快排分割.html">
-        <i class="icon-tag icon-large"></i>快排分割
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/字符串.html">
-        <i class="icon-tag icon-large"></i>字符串
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/pelican.html">
-        <i class="icon-tag icon-large"></i>pelican
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/qsort.html">
-        <i class="icon-tag icon-large"></i>qsort
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/指针.html">
-        <i class="icon-tag icon-large"></i>指针
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/读书笔记.html">
-        <i class="icon-tag icon-large"></i>读书笔记
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/程序员.html">
-        <i class="icon-tag icon-large"></i>程序员
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/算法.html">
-        <i class="icon-tag icon-large"></i>算法
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/markdown.html">
-        <i class="icon-tag icon-large"></i>markdown
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/Linus.html">
-        <i class="icon-tag icon-large"></i>Linus
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/动态规划.html">
-        <i class="icon-tag icon-large"></i>动态规划
-    </a>
-</li>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-
-</ul>        </div><!--/.well -->
-
-      </div><!--/row-->
-
-      <hr>
-
-      <footer>
-        <address id="about">
-                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
-				which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
-        </address><!-- /#about -->
-
-        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>, 
-		   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
-      </footer>
-
-    </div><!--/.fluid-container-->
-
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
     <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39001925-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
 <script type="text/javascript">
-try {
-	var pageTracker = _gat._getTracker("UA-39001925-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-        <script type="text/javascript">
     var disqus_shortname = 'mkingblog';
     (function () {
         var s = document.createElement('script'); s.async = true;
@@ -313,26 +319,5 @@ pageTracker._trackPageview();
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
-    
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../theme/js/jquery.js"></script>
-    <script src="../theme/js/bootstrap-transition.js"></script>
-    <script src="../theme/js/bootstrap-alert.js"></script>
-    <script src="../theme/js/bootstrap-modal.js"></script>
-    <script src="../theme/js/bootstrap-dropdown.js"></script>
-    <script src="../theme/js/bootstrap-scrollspy.js"></script>
-    <script src="../theme/js/bootstrap-tab.js"></script>
-    <script src="../theme/js/bootstrap-tooltip.js"></script>
-    <script src="../theme/js/bootstrap-popover.js"></script>
-    <script src="../theme/js/bootstrap-button.js"></script>
-    <script src="../theme/js/bootstrap-collapse.js"></script>
-    <script src="../theme/js/bootstrap-carousel.js"></script>
-    <script src="../theme/js/bootstrap-typeahead.js"></script>
-	
-	<!--<script src="../theme/js/autosidebar.js"></script>-->
-  </body>
+</body>
 </html>

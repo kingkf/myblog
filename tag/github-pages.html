@@ -1,124 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Mr.King的博客 - github pages</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+        <meta charset="utf-8" />
+        <title>Mr.King的博客 - github pages</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
 
-    <!-- Le styles -->
-    <link rel="stylesheet" href="../theme/css/bootstrap.css" type="text/css" />
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-	
-	.tag-1 {
-		font-size: 13pt;
-	}
-	
-	.tag-2 {
-		font-size: 10pt;
-	}
-	
-	.tag-2 {
-		font-size: 8pt;
-	}
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
 
-	.tag-4 {
-		font-size: 6pt;
-	}
-	
-    </style>
-    <link href="../theme/css/bootstrap-responsive.css" rel="stylesheet">
-	<link href="../theme/css/font-awesome.css" rel="stylesheet">
-	
-    <link href="../theme/css/pygments.css" rel="stylesheet">
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Mr.King的博客 </a></h1>
+                <nav><ul>
+                    <li><a href="/category/algorithm.html">algorithm</a></li>
+                    <li><a href="/category/booknotes.html">booknotes</a></li>
+                    <li><a href="/category/tech.html">tech</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">用github pages和pelican搭建免费的个人博客</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2013-01-16T00:00:00">
+                Wed 16 January 2013
+        </abbr>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="../theme/images/favicon.ico">
-    <link rel="apple-touch-icon" href="../theme/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../theme/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../theme/images/apple-touch-icon-114x114.png">
-
-    <link href="../" type="application/atom+xml" rel="alternate" title="Mr.King的博客 ATOM Feed" />
-    
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="../index.html">Mr.King的博客 </a>
-          <div class="nav-collapse">
-            <ul class="nav">
-                                          			  <li class="divider-vertical"></li>
-                                              <li >
-                    <a href="../category/algorithm.html">
-						<i class="icon-folder-open icon-large"></i>algorithm
-					</a>
-                  </li>
-                                <li >
-                    <a href="../category/booknotes.html">
-						<i class="icon-folder-open icon-large"></i>booknotes
-					</a>
-                  </li>
-                                <li >
-                    <a href="../category/tech.html">
-						<i class="icon-folder-open icon-large"></i>tech
-					</a>
-                  </li>
-              			  
-			  <ul class="nav pull-right">
-				<li><a href="../archives.html"><i class="icon-th-list"></i>Archives</a></li>
-			  </ul>
-			  
-            </ul>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="span9" id="content">
-                    
-		<div class='article'>
-		<h1><a href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">用github pages和pelican搭建免费的个人博客</a></h1>
-		<div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-01-16T00:00:00">
-	<i class="icon-calendar"></i>Wed, 16 Jan 2013
-</abbr>
-<span class="label">By</span>
-<a href="../author/mrking.html"><i class="icon-user"></i>Mr.King</a>
-<span class="label">Category</span>
-<a href="../category/tech.html"><i class="icon-folder-open"></i>tech</a>. 
-
-	
-<span class="label">Tags</span> 
-	<a href="../tag/github-pages.html"><i class="icon-tag"></i>github pages</a>
-	<a href="../tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="../tag/markdown.html"><i class="icon-tag"></i>markdown</a>
-</footer><!-- /.post-info --></div>
-		<div class="summary"><p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
+        <address class="vcard author">
+                By <a class="url fn" href="/author/mrking.html">Mr.King</a>
+        </address>
+<p>In <a href="/category/tech.html">tech</a>. </p>
+<p>tags: <a href="/tag/github-pages.html">github pages</a><a href="/tag/pelican.html">pelican</a><a href="/tag/markdown.html">markdown</a></p>
+</footer><!-- /.post-info --><p>最近有个需求，就是将一系列md文件以博客的形式发布出来,顺便原先搭建在openshift上的博客访问越来越慢，貌似要步gae的后尘了，决定买个域名将博客也放到github pages上来。在网上搜了下解决方案，不知道哪种好，去Cpyug上问，发现了<a href="https://github.com/getpelican/pelican">pelican</a>这么个好东西。开始想用openshift托管，可是现在电脑上没有openshift的环境而且也不知道怎么弄，无意中看到了gitcafe pages+pelican的解决方案(<a href="http://riku.gitcafe.com/pelican-gitcafe.html">这里</a>)。可是想到gitcafe要收费了，而且免费的托管空间只有200多k，又想起原先在阮一峰的博客上看到过用github pages + jekyll的方式搭建博客(<a href="http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html">这里</a>)，github是免费而且没有限制的啊！于是我想着把这两个整合下，即用github pages + pelican的解决方案。</p>
 <p>我的操作系统： <strong>Ubuntu 12.04</strong></p>
 <p>首先安装pelican：</p>
 <blockquote>
@@ -133,152 +48,86 @@
 <blockquote>
 <p>pelican-quickstart</p>
 </blockquote>
-<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改 ...</p> 
-			<a class="btn primary xsmall" href="../yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html">more ...</a>
-		</div>
-	</div>	
-	<hr />
-	
-		        </div><!--/span-->
-      
-		<div class="span3 well sidebar-nav" id="sidebar">
-            <ul class="nav nav-list">
-<li class="nav-header"><h4><i class="icon-external-link"></i>blogroll</h4></li>
-    <li><i class="icon-external-link"></i><a href="http://docs.notmyidea.org/alexis/pelican/">Pelican</a></li>
-    <li><i class="icon-external-link"></i><a href="http://python.org">Python.org</a></li>
-    <li><i class="icon-external-link"></i><a href="http://jinja.pocoo.org">Jinja2</a></li>
-    <li><i class="icon-external-link"></i><a href="http://iguang.info">产品经理阿光机</a></li>
-    <li><i class="icon-external-link"></i><a href="http://coolshell.com">酷壳</a></li>
-    <li><i class="icon-external-link"></i><a href="http://news.dbanotes.net/">中国的HackNews</a></li>
-<li class="nav-header"><h4><i class="icon-home icon-large"></i> social</h4></li>
-<li><a href="../" rel="alternate"><i class="icon-bookmark icon-large"></i>atom feed</a></li>
-    <li><a href="http://weibo.com/zybest"><i class="icon-我的新浪微博-sign icon-large"></i>我的新浪微博</a></li>
-    <li><a href="https://gist.github.com/kingkf"><i class="icon-Gists-sign icon-large"></i>Gists</a></li>
+<p>按照提示一步步的设置，不知道怎么设置的按默认的就行，后面可以在<strong>pelicanconf.py</strong>这个文件中改。</p>
+<p>接着，在github上创建一个项目，比如：myblog。把这个项目git clone到 yourblog这个文件夹下面。进入这个目录：</p>
+<blockquote>
+<p>cd myblog</p>
+</blockquote>
+<p>然后，创建一个没有父节点的分支gh-pages。因为github规定，只有该分支中的页面，才会生成网页文件。</p>
+<blockquote>
+<p>git checkout --orphan gh-pages</p>
+</blockquote>
+<p>接着，我们就可以用pelican写博客了，pelican支持markdown等流行的文档格式。我用mardown举例，具体怎么写可以去看pelican的<a href="http://docs.getpelican.com/en/3.1.1/">文档</a>.
+进入content目录，用编辑器创建一个文件，写入博客内容：</p>
+<blockquote>
+<p>Date: 2010-12-03 #日期</p>
+<p>Title: My super title ＃标题</p>
+<p>Tags: thats, awesome #标签 </p>
+<p>Category: tech #分类</p>
+<p>文章内容</p>
+</blockquote>
+<p>其中Date和Title是必须的，其它的可以不写，分类的话不写就是默认分类，默认分类在配置文件中设置，当然如果该文件位于content目录中某个子目录中时，如./content/tech，那pelican就把这篇文章分类为子目录名tech。还有很多别的元数据属性，具体参见文档。当然也可以不写Date和Title，但是文件的命名有相关的规定，这点文档中也有。</p>
+<p>写完了文章，就该发布了！回到yourblog的根目录，用下面的命令：</p>
+<blockquote>
+<p>pelican -s pelicanconf.py content -o myblog</p>
+</blockquote>
+<p>这样就会把content中的md文件，翻译成html静态页面，这些页面存放在myblog中。进入myblog目录,提交文章到github</p>
+<blockquote>
+<p>git add .</p>
+<p>git commit -m "first blog"</p>
+<p>git push -u origin gh-pages</p>
+</blockquote>
+<p>上传成功之后，第一次需要等10分钟左右，访问http://username.github.com/myblog/就可以看到Blog已经生成了（将username换成你的用户名,myblog对应你在github上创建的项目）.</p>
+<p>关于github和git的使用，这里就不说了。<strong>友情提示</strong>：别忘了在github上配置RSA公钥</p>
+<p>下面讲讲<strong>域名绑定</strong></p>
+<p>用我的域名kaifengjin.com做为例子
+在文章的输出目录，即myblog目录，创建一个文件CNAME，里面写上:<strong>www.kaifengjin.com</strong> git push到github。然后在域名服务商那，把域名对应的ip改成username.github.com对应的ip即可（有些域名服务商改完后可能要等段时间，最多可能到1天，改完后ping下域名看看是否对应的是改后的ip）。接下来就可以用域名访问自己的博客了！</p>
+<p>ps:我的博客用的不是默认的主题，可以从https://github.com/farseerfc/pelican-themes这里下载主题，我用的是bootstrap2这个主题～不用默认主题，只需要在配置文件中加上THEME = bootstrap2,然后在发布命令中加入-t [主题目录所在路径]即可，即pelican -s pelicanconf.py content -o myblog -t bootsrap2</p><p>There are <a href="/yong-github-pageshe-pelicanda-jian-mian-fei-de-ge-ren-bo-ke.html#disqus_thread">comments</a>.</p>                </article>
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </aside><!-- /#featured -->
+            </ol><!-- /#posts-list -->
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
 
-<li class="nav-header"><h4><i class="icon-folder-close icon-large"></i>Categories</h4></li>
-<li>
-<a href="../category/algorithm.html">
-    <i class="icon-folder-open icon-large"></i>algorithm
-</a>
-</li>
-<li>
-<a href="../category/booknotes.html">
-    <i class="icon-folder-open icon-large"></i>booknotes
-</a>
-</li>
-<li>
-<a href="../category/tech.html">
-    <i class="icon-folder-open icon-large"></i>tech
-</a>
-</li>
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-<li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-4">
-    <a href="../tag/技术的力量.html">
-        <i class="icon-tag icon-large"></i>技术的力量
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/快速排序.html">
-        <i class="icon-tag icon-large"></i>快速排序
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/github pages.html">
-        <i class="icon-tag icon-large"></i>github pages
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/leetcode.html">
-        <i class="icon-tag icon-large"></i>leetcode
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/快排分割.html">
-        <i class="icon-tag icon-large"></i>快排分割
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/字符串.html">
-        <i class="icon-tag icon-large"></i>字符串
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/pelican.html">
-        <i class="icon-tag icon-large"></i>pelican
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/qsort.html">
-        <i class="icon-tag icon-large"></i>qsort
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/指针.html">
-        <i class="icon-tag icon-large"></i>指针
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/读书笔记.html">
-        <i class="icon-tag icon-large"></i>读书笔记
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/程序员.html">
-        <i class="icon-tag icon-large"></i>程序员
-    </a>
-</li>
-<li class="tag-1">
-    <a href="../tag/算法.html">
-        <i class="icon-tag icon-large"></i>算法
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/markdown.html">
-        <i class="icon-tag icon-large"></i>markdown
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/Linus.html">
-        <i class="icon-tag icon-large"></i>Linus
-    </a>
-</li>
-<li class="tag-4">
-    <a href="../tag/动态规划.html">
-        <i class="icon-tag icon-large"></i>动态规划
-    </a>
-</li>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-
-</ul>        </div><!--/.well -->
-
-      </div><!--/row-->
-
-      <hr>
-
-      <footer>
-        <address id="about">
-                Proudly powered by <a href="http://pelican.notmyidea.org/">Pelican <i class="icon-external-link"></i></a>,
-				which takes great advantage of <a href="http://python.org">Python <i class="icon-external-link"></i></a>.
-        </address><!-- /#about -->
-
-        <p>The theme is from <a href="http://twitter.github.com/bootstrap/">Bootstrap from Twitter <i class="icon-external-link"></i></a>, 
-		   and <a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome <i class="icon-external-link"></i></a>, thanks!</p>
-      </footer>
-
-    </div><!--/.fluid-container-->
-
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
     <script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39001925-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
 <script type="text/javascript">
-try {
-	var pageTracker = _gat._getTracker("UA-39001925-1");
-pageTracker._trackPageview();
-} catch(err) {}</script>
-        <script type="text/javascript">
     var disqus_shortname = 'mkingblog';
     (function () {
         var s = document.createElement('script'); s.async = true;
@@ -287,26 +136,5 @@ pageTracker._trackPageview();
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
 </script>
-    
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="../theme/js/jquery.js"></script>
-    <script src="../theme/js/bootstrap-transition.js"></script>
-    <script src="../theme/js/bootstrap-alert.js"></script>
-    <script src="../theme/js/bootstrap-modal.js"></script>
-    <script src="../theme/js/bootstrap-dropdown.js"></script>
-    <script src="../theme/js/bootstrap-scrollspy.js"></script>
-    <script src="../theme/js/bootstrap-tab.js"></script>
-    <script src="../theme/js/bootstrap-tooltip.js"></script>
-    <script src="../theme/js/bootstrap-popover.js"></script>
-    <script src="../theme/js/bootstrap-button.js"></script>
-    <script src="../theme/js/bootstrap-collapse.js"></script>
-    <script src="../theme/js/bootstrap-carousel.js"></script>
-    <script src="../theme/js/bootstrap-typeahead.js"></script>
-	
-	<!--<script src="../theme/js/autosidebar.js"></script>-->
-  </body>
+</body>
 </html>
